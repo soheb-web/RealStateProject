@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:realstate/pages/details.page.dart';
 
 class PerticulerPropertyPage extends StatefulWidget {
   const PerticulerPropertyPage({super.key});
@@ -705,8 +707,8 @@ class PropertyCard extends StatelessWidget {
             children: [
               // IMAGE
               ClipRRect(
-                borderRadius: const BorderRadius.vertical(
-                  top: Radius.circular(14),
+                borderRadius:  BorderRadius.vertical(
+                  top: Radius.circular(14.r),
                 ),
                 child: Image.network(
                   "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
@@ -770,7 +772,14 @@ class PropertyCard extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15.r),
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => DetailsPage(),
+                                ),
+                              );
+                            },
                             child: Text(
                               "View",
                               style: GoogleFonts.inter(color: Colors.black),
