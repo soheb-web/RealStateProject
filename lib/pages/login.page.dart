@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:realstate/pages/home.page.dart';
 import 'package:realstate/pages/loginwithOtp.page.dart';
 
@@ -43,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                   "Sign In",
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 18,
                     fontWeight: FontWeight.w700,
                     color: Color(0xff0E1A35),
                   ),
@@ -55,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                   "Username",
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff0E1A35),
                   ),
@@ -71,15 +72,17 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(14),
                     border: Border.all(color: Colors.grey.shade300),
                   ),
-                  child: const Row(
+                  child:  Row(
                     children: [
                       Icon(Icons.person_outline, color: Colors.grey),
                       SizedBox(width: 10),
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
+                            hintStyle: TextStyle(fontSize: 14.sp),
                             hintText: "Username",
                             border: InputBorder.none,
+
                           ),
                         ),
                       ),
@@ -93,7 +96,8 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                   "Password",
                   style: TextStyle(
-                    fontSize: 16,
+
+                    fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Color(0xff0E1A35),
                   ),
@@ -116,7 +120,8 @@ class _LoginPageState extends State<LoginPage> {
                       Expanded(
                         child: TextField(
                           obscureText: obscure,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
+                            hintStyle: TextStyle(fontSize: 14.sp),
                             hintText: "Password",
                             border: InputBorder.none,
                           ),
@@ -149,18 +154,18 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                     child: Container(
-                      height: 60,
+                      height: 45,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: const Color(0xffE86A34),
                         borderRadius: BorderRadius.circular(40),
                       ),
-                      child: const Center(
+                      child:  Center(
                         child: Text(
                           "Sign In",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 19,
+                            fontSize: 17.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -183,17 +188,18 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                     child: RichText(
-                      text: const TextSpan(
+                      text:  TextSpan(
                         text: "Login",
                         style: TextStyle(
                           color: Color(0xffE86A34),
-                          fontSize: 16,
+                          fontSize: 14.sp,
                           fontWeight: FontWeight.w600,
                         ),
                         children: [
                           TextSpan(
                             text: " with Otp",
                             style: TextStyle(
+                              fontSize: 14.sp,
                               color: Color(0xff0E1A35),
                               fontWeight: FontWeight.w600,
                             ),

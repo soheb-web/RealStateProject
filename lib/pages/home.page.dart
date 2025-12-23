@@ -7,6 +7,8 @@ import 'package:marquee/marquee.dart';
 import 'package:realstate/pages/add.service.page.dart';
 import 'package:realstate/pages/propertyCat.page.dart';
 
+import 'createPropertyPage.dart';
+
 class RealEstateHomePage extends StatefulWidget {
   const RealEstateHomePage({super.key});
 
@@ -208,15 +210,16 @@ class _RealEstateHomePageState extends State<RealEstateHomePage> {
                           crossAxisSpacing: 12,
                           mainAxisSpacing: 12,
                           children: [
-                            _gridItem(Icons.house, "Buy House"),
-                            _gridItem(Icons.apartment, "Rent Studio"),
-                            _gridItem(Icons.business, "Buy Flats"),
-                            _gridItem(Icons.landscape, "Buy Plots"),
-                            _gridItem(Icons.store, "Commercial"),
-                            _gridItem(Icons.hotel, "Buy Hotels"),
-                            _gridItem(Icons.location_city, "Rent Condos"),
-                            _gridItem(Icons.domain, "Buy Duplex"),
-                            _gridItem(Icons.home_work, "Rent House"),
+
+                            _gridItem("assets/png/home.png", "Buy House"),
+                            _gridItem("assets/png/apartment.png",  "Rent Studio"),
+                            _gridItem("assets/png/buyFlat.png",  "Buy Flats"),
+                            _gridItem("assets/png/buyPlot.png",  "Buy Plots"),
+                            _gridItem("assets/png/commercial.png","Commercial"),
+                            _gridItem("assets/png/buyHotel.png", "Buy Hotels"),
+                            _gridItem("assets/png/rentCondos.png", "Rent Condos"),
+                            _gridItem("assets/png/buyDuplex.png", "Buy Duplex"),
+                            _gridItem("assets/png/rentHouse.png", "Rent House"),
                           ],
                         ),
                       ),
@@ -240,7 +243,7 @@ class _RealEstateHomePageState extends State<RealEstateHomePage> {
             setState(() => bottomIndex = 2);
             Navigator.push(
               context,
-              CupertinoPageRoute(builder: (context) => AddServicePage()),
+              CupertinoPageRoute(builder: (context) => CreatePropertyScreen()),
             );
           },
           child: const Icon(Icons.add, size: 28, color: Colors.white),
@@ -356,7 +359,7 @@ class _RealEstateHomePageState extends State<RealEstateHomePage> {
   }
 
   /// ================= GRID ITEM =================
-  Widget _gridItem(IconData icon, String title) {
+  Widget _gridItem(String icon, String title) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
@@ -365,7 +368,8 @@ class _RealEstateHomePageState extends State<RealEstateHomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, color: const Color(0xffFF6A2A), size: 28),
+          Image.asset(icon),
+          // Icon(icon, color: const Color(0xffFF6A2A), size: 28),
           SizedBox(height: 6),
           Text(
             title,
@@ -951,9 +955,7 @@ class LoanService extends StatelessWidget {
           _bulletText("Loan Offers from 34+ Banks"),
           _bulletText("Dedicated RM for Property Search"),
           _bulletText("Highest Loan Value & Lowest ROI"),
-
           SizedBox(height: 12.h),
-
           Text(
             "Check Your Credit Score →",
             style: TextStyle(
@@ -963,7 +965,6 @@ class LoanService extends StatelessWidget {
             ),
           ),
           SizedBox(height: 12.h),
-
           /// 🔹 Heading
           Row(
             children: [
@@ -985,15 +986,12 @@ class LoanService extends StatelessWidget {
               ),
             ],
           ),
-
           SizedBox(height: 6.h),
           Text(
             "Get personalised home loan offers from top banks in just 2 mins.",
             style: TextStyle(fontSize: 12.sp, color: Colors.black),
           ),
-
           SizedBox(height: 14.h),
-
           /// 🔹 Info Chips
           Wrap(
             spacing: 8.w,
@@ -1005,14 +1003,10 @@ class LoanService extends StatelessWidget {
               _chip("Monthly income - ₹1,00,000"),
             ],
           ),
-
           SizedBox(height: 16.h),
-
           /// 🔹 Bank Card
           _bankOfferCard(),
-
           SizedBox(height: 16.h),
-
           /// 🔹 Explore Button
           Center(
             child: Container(
@@ -1034,17 +1028,13 @@ class LoanService extends StatelessWidget {
               ),
             ),
           ),
-
           SizedBox(height: 24.h),
-
           /// 🔹 How it works
           Text(
             "How it works?",
             style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
           ),
-
           SizedBox(height: 16.h),
-
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -1090,7 +1080,6 @@ class LoanService extends StatelessWidget {
               );
             },
           ),
-
           SizedBox(height: 25.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1109,7 +1098,6 @@ class LoanService extends StatelessWidget {
               ),
             ],
           ),
-
           SizedBox(height: 25.h),
           Image.asset("assets/Frame (1).png"),
           SizedBox(height: 25.h),

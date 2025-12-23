@@ -34,7 +34,7 @@ class OnboardingPage1 extends StatelessWidget {
                 "Find Your Perfect Home\nEasily",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 28.sp,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.w700,
                   color: Color(0xffE86A34),
                   height: 1.3,
@@ -53,7 +53,7 @@ class OnboardingPage1 extends StatelessWidget {
                 "Your dream home is now just a tap away.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 15.sp,
+                  fontSize: 16.sp,
                   height: 1.55,
                   color: Color(0xff7B7B7B),
                 ),
