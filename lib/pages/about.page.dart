@@ -247,7 +247,9 @@ class AboutUsPage extends StatelessWidget {
   }
 
   Widget _buildEthosItem(IconData icon, String title, String desc) {
-    return Padding(
+    return
+
+      Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -272,5 +274,9 @@ class AboutUsPage extends StatelessWidget {
         ],
       ),
     );
+
+
   }
+
+
 }

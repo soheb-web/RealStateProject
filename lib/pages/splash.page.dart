@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:realstate/pages/onboarding.page.dart';
 
 class PropertyIntroPage extends StatelessWidget {
@@ -88,7 +89,7 @@ class PropertyIntroPage extends StatelessWidget {
               left: 40,
               right: 40,
               child: SizedBox(
-                height: 65,
+                height: 45,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xffF37A33),
@@ -104,10 +105,10 @@ class PropertyIntroPage extends StatelessWidget {
                       ),
                     );
                   },
-                  child: const Text(
+                  child:  Text(
                     "Get Started",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 16.h,
                       fontWeight: FontWeight.w600,
                       color: Colors.white,
                     ),
